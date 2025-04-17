@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Hesaplar</title>
+    <style>
+        body { font-family: sans-serif; padding: 10px; width: 300px; }
+        input, button { margin: 5px 0; width: 100%; }
+    </style>
+</head>
+<body>
+<hr>
+<h4>Toplu İçe Aktar</h4>
+<textarea id="bulkTokens" placeholder="Her satıra bir auth_token yazın" rows="6" style="width:100%;"></textarea>
+<br>
+<button id="importBulk">Toplu İçe Aktar</button>
+<h3>Hesap Ekle</h3>
+<input type="text" id="name" placeholder="Hesap Adı">
+<input type="text" id="token" placeholder="auth_token">
+<button id="add">Ekle</button>
+
+<h3>Hesaplar</h3>
+<div id="accounts"></div>
+</body>
+<script src="popup.js"></script>
+</html>
