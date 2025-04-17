@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Account Switcher",
+  "version": "1.0",
+  "description": "Switch Twitter accounts using auth_token cookie. ( Developer: Mücahit Akın)",
+  "author": "Mücahit Akın",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
